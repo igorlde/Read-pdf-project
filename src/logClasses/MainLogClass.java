@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 
 public class MainLogClass implements InterfaceLogs {
     private static final String LOG_PATH =
-            "..\projetos-java\\leitor-pdf\\src\\configFiles\\books.log";
+            "C:\\Users\\PC\\Documents\\projetos-java\\leitor-pdf\\src\\configFiles\\books.log";
 
     private final Path logFilePath;
     protected String name;
@@ -97,13 +97,13 @@ public class MainLogClass implements InterfaceLogs {
         );
     }
     //I do this to facillty test of codes
-    public static void main(String[] args) {
-        MainLogClass mainLogClass = new MainLogClass();
-        try {
-            mainLogClass.logNewBook("molestado", 60, 302.5F);
-            mainLogClass.createLog("algebra 1 para leigos", 245, 250.0F);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-    }
+//    public static void main(String[] args) {
+//        MainLogClass mainLogClass = new MainLogClass();
+//        try {
+//            mainLogClass.logNewBook("molestado", 60, 302.5F);
+//            mainLogClass.createLog("algebra 1 para leigos", 245, 250.0F);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
 }
