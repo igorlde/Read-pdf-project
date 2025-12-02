@@ -10,8 +10,9 @@ public class Main {
 //        String text = readPdfCore.readPDF("C:\\Users\\PC\\Documents\\Sistemas-opreacionais\\Governos-apos-ditadura.pdf", 3);
 //        System.out.println(text);
         try {
-            readPdfCore.mixLogOfBooks("C:\\Users\\PC\\Documents\\Sistemas-opreacionais\\Governos-apos-ditadura.pdf",
-                    2, 148.8F);
+           String text = readPdfCore.mixLogOfBooks("C:\\Users\\PC\\Documents\\Sistemas-opreacionais\\Governos-apos-ditadura.pdf",
+                    1, 148.8F);
+            System.out.println(text);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

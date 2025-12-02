@@ -53,10 +53,13 @@ public class ReadPdfCore implements corePDfInterface {
         return null;
     }
     @Override
-    public void mixLogOfBooks(String pathOfAchive, Integer numberOfPage, Float zoom) throws IOException {
+    public String mixLogOfBooks(String pathOfAchive, Integer numberOfPage, Float zoom) throws IOException {
         MainLogClass mainLogClass = new MainLogClass();
         //this part of code are gonna for mixed log with readPDF.
+
         String nameBook = searchNameBook(pathOfAchive);
         mainLogClass.logNewBook(nameBook, numberOfPage, zoom);
+        String text = readPDF(pathOfAchive, numberOfPage);
+        return text;
     }
 }
