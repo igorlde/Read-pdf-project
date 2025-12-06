@@ -25,7 +25,6 @@ public enum LogSystemOSEnum {
              }
              return;
     }
-
     },
 
     //Linux log function for create in the system

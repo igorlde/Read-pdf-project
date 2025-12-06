@@ -78,6 +78,7 @@ public class MainLogClass implements InterfaceLogs {
     @Override
     public void createdLog(String nameBook, Integer page, Float zoom) throws IOException {
         MainLogClass thisClass = new MainLogClass(nameBook, page, zoom);
+        checkOs();
         try(FileWriter fw = new FileWriter(logFilePath.toFile(), true);
             BufferedWriter bw = new BufferedWriter(fw)){
                 bw.write(thisClass.toString());
@@ -117,16 +118,9 @@ public class MainLogClass implements InterfaceLogs {
         return null;
     }
     //I do this to facillty test of codes
-   public static void main(String[] args) {
-//       MainLogClass mainLogClass = new MainLogClass();
-//       try{
-//          List<LogEntry> list = mainLogClass.sendBackInformationLog();
-//          for (LogEntry a :list){
-//              System.out.println(a);
-//          }
-//       } catch (RuntimeException | IOException e) {
-//           throw new RuntimeException(e);
-//       }
+   public static void main(String[] args) throws IOException {
+       MainLogClass mainLogClass = new MainLogClass();
+       mainLogClass.createdLog("molester book", 10, 153.4F);
 //       System.out.println(systemOs); it do
   }
 }
