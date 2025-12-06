@@ -58,7 +58,7 @@ public class ReadPdfCore implements corePDfInterface {
         //this part of code are gonna for mixed log with readPDF.
 
         String nameBook = searchNameBook(pathOfAchive);
-        mainLogClass.logNewBook(nameBook, numberOfPage, zoom);
+//        mainLogClass.logNewBook(nameBook, numberOfPage, zoom);
         String text = readPDF(pathOfAchive, numberOfPage);
         return text;
     }
